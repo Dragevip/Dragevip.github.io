@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Encrypt and Decrypt Text</title>
+	</head>
+	<body>
+		<textarea id="encrypt" placeholder="Normal text goes here..." style="width:600px; height:100px;" value=""></textarea>
+		<br>
+		<textarea id="decrypt" placeholder="Encrypted text goes here..." style="width:600px; height:100px;" value=""></textarea>
+		<script>
+			document.getElementById("encrypt").addEventListener('input', function() {
+				document.getElementById("decrypt").value = btoa(document.getElementById("encrypt").value)
+			});
+			document.getElementById("decrypt").addEventListener('input', function() {
+				document.getElementById("encrypt").value = atob(document.getElementById("decrypt").value)
+			});
+		</script>
+	</body>
+</html>
