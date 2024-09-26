@@ -21,6 +21,10 @@
     <script>
       const w = window.open()
       w.document.body.innerHTML = "<iframe src='https://dragevip.github.io/main.html' style='position: absolute; top: 0; right: 0; bottom: 0: left: 0; border: none;' width='100%' height='100%'>"
+      const wait = setTimeout(redirect, 10000);
+      function redirect() {
+        window.location.replace("https://wendellschools.schoology.com/home/")
+      }
     </script>
   </body>
 </html>
